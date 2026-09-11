@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 224 224" width="224" height="224">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#2A1A66"/>
+      <stop offset="50%" stop-color="#4B2ECC"/>
+      <stop offset="100%" stop-color="#7C41E8"/>
+    </linearGradient>
+    <linearGradient id="sheen" x1="0" y1="0" x2="0.55" y2="1">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.22"/>
+      <stop offset="65%" stop-color="#FFFFFF" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="cool" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#7CF0FF"/>
+      <stop offset="100%" stop-color="#18A9F0"/>
+    </linearGradient>
+    <linearGradient id="warmwhite" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="100%" stop-color="#E3DAFF"/>
+    </linearGradient>
+    <clipPath id="halfL"><rect x="0" y="0" width="112" height="224"/></clipPath>
+    <clipPath id="halfR"><rect x="112" y="0" width="112" height="224"/></clipPath>
+    <filter id="drop" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="6" stdDeviation="8" flood-color="#12082E" flood-opacity="0.40"/>
+    </filter>
+  </defs>
+  <rect width="224" height="224" rx="50" fill="url(#bg)"/>
+  <rect width="224" height="224" rx="50" fill="url(#sheen)"/>
+  <g stroke="#FFFFFF" stroke-opacity="0.08" stroke-width="2">
+    <line x1="42" y1="0" x2="42" y2="224"/><line x1="182" y1="0" x2="182" y2="224"/>
+    <line x1="0" y1="42" x2="224" y2="42"/><line x1="0" y1="182" x2="224" y2="182"/>
+  </g>
+  <g filter="url(#drop)">
+    <g clip-path="url(#halfL)">
+      <path d="M62 54 L112 142 L162 54" fill="none" stroke="url(#warmwhite)" stroke-width="28" stroke-linejoin="miter" stroke-miterlimit="10"/>
+    </g>
+    <g clip-path="url(#halfR)">
+      <path d="M62 54 L112 142 L162 54" fill="none" stroke="url(#cool)" stroke-width="28" stroke-linejoin="miter" stroke-miterlimit="10"/>
+    </g>
+  </g>
+  <path d="M176 34 L182 50 L198 56 L182 62 L176 78 L170 62 L154 56 L170 50 Z" fill="#FFD166"/>
+</svg>

@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Documentation — Vantorix</title>
+<meta name="description" content="How to install, license and use Vantorix Toolkit for Elementor and the Vantorix Pro add-on.">
+<link rel="icon" href="assets/icon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body class="docs-body">
+
+<a class="skip" href="#doc">Skip to content</a>
+
+<header class="topbar">
+  <div class="shell topbar__inner">
+    <a class="brand" href="index.html">
+      <img src="assets/icon.svg" alt="" width="32" height="32">
+      <span>Vantorix</span>
+    </a>
+    <nav class="nav" aria-label="Primary">
+      <a href="index.html#modules">Modules</a>
+      <a href="index.html#pricing">Pricing</a>
+      <a href="index.html#download">Download</a>
+      <a href="docs.html" aria-current="page">Docs</a>
+      <a class="nav__cta" href="index.html#contact">Get a license</a>
+    </nav>
+  </div>
+</header>
+
+<div class="docs">
+  <div class="shell docs__grid">
+
+    <!-- ── Side navigation ──────────────────────────────────────────── -->
+    <aside class="docs__side">
+      <nav class="toc" aria-label="Documentation">
+        <p class="toc__group">Getting started</p>
+        <a href="#requirements">Requirements</a>
+        <a href="#install-free">Install the free plugin</a>
+        <a href="#install-pro">Install Pro</a>
+        <a href="#license">Apply a license</a>
+
+        <p class="toc__group">Modules</p>
+        <a href="#header-footer">Header &amp; Footer Builder</a>
+        <a href="#popup">Popup Builder</a>
+        <a href="#404">404 Page Builder</a>
+        <a href="#loader">Screen Loader</a>
+        <a href="#archive">Archive Builder</a>
+        <a href="#single">Single Post Builder</a>
+        <a href="#search">Search Builder</a>
+        <a href="#tags">Dynamic Tags</a>
+        <a href="#library">Template Library</a>
+
+        <p class="toc__group">Reference</p>
+        <a href="#targeting">Display conditions</a>
+        <a href="#widgets">Widgets</a>
+        <a href="#hooks">Hooks for developers</a>
+        <a href="#troubleshooting">Troubleshooting</a>
+        <a href="#faq">Questions</a>
+      </nav>
+    </aside>
+
+    <!-- ── Content ──────────────────────────────────────────────────── -->
+    <main class="docs__main" id="doc">
+
+      <h1>Documentation</h1>
+      <p class="docs__lede">
+        Everything about installing, licensing and building with Vantorix. If something here is
+        wrong or missing, <a href="index.html#contact">tell us</a> and it gets fixed.
+      </p>
+
+      <section id="requirements">
+        <h2>Requirements</h2>
+        <table class="spec">
+          <tbody>
+            <tr><th scope="row">WordPress</th><td>6.0 or newer</td></tr>
+            <tr><th scope="row">PHP</th><td>7.4 or newer</td></tr>
+            <tr><th scope="row">Elementor</th><td>3.5 or newer (the free version is enough)</td></tr>
+            <tr><th scope="row">Vantorix Toolkit</th><td>1.1.0 or newer, required by Pro</td></tr>
+          </tbody>
+        </table>
+        <p>Elementor Pro is not required. Vantorix works alongside it if you already have it.</p>
+      </section>
+
+      <section id="install-free">
+        <h2>Install the free plugin</h2>
+        <ol class="doc-steps">
+          <li>In your dashboard, go to <b>Plugins → Add New</b>.</li>
+          <li>Search for <b>Vantorix</b>.</li>
+          <li>Press <b>Install Now</b>, then <b>Activate</b>.</li>
+          <li>A <b>Vantorix</b> item appears in the admin menu.</li>
+        </ol>
+        <p>
+          You can also download the zip from
+          <a href="https://wordpress.org/plugins/vantorix-toolkit/" target="_blank" rel="noopener">WordPress.org</a>
+          and upload it under Plugins → Add New → Upload Plugin.
+        </p>
+      </section>
+
+      <section id="install-pro">
+        <h2>Install Pro</h2>
+        <p>
+          Pro is a second plugin that sits on top of the free one. Install the free plugin first,
+          or Pro will tell you it cannot start.
+        </p>
+        <ol class="doc-steps">
+          <li><a href="index.html#download">Download <code>vantorix-pro.zip</code></a> using your licence key.</li>
+          <li>Go to <b>Plugins → Add New → Upload Plugin</b> and choose the file.</li>
+          <li>Press <b>Install Now</b>, then <b>Activate</b>.</li>
+          <li>A <b>License</b> item appears under the Vantorix menu.</li>
+        </ol>
+        <p class="callout">
+          The download needs your licence key. Once installed, Pro stays dormant until the key is
+          applied on that site — nothing changes and nothing breaks in the meantime.
+        </p>
+      </section>
+
+      <section id="license">
+        <h2>Apply a license</h2>
+        <p>
+          Licenses are issued by hand. Send us the domain you want to use and we send a key back,
+          usually the same day.
+        </p>
+        <ol class="doc-steps">
+          <li>Go to <b>Vantorix → License</b>.</li>
+          <li>Paste your key, or your ThemeForest purchase code, into the field.</li>
+          <li>Press <b>Activate</b>.</li>
+          <li>Go to <b>Vantorix → Modules</b> and switch on the modules you want.</li>
+        </ol>
+
+        <h3>How domains are counted</h3>
+        <ul class="doc-list">
+          <li><code>example.com</code> and <code>www.example.com</code> count as one site.</li>
+          <li>Local and staging sites run unlocked and never use a slot. That covers
+            <code>localhost</code>, any <code>.local</code> or <code>.test</code> address, and hosts
+            starting with <code>staging.</code>, <code>stage.</code>, <code>dev.</code> or
+            <code>test.</code>.</li>
+          <li>Moving to a new domain? Press <b>Remove from this site</b> on the old one first, which
+            frees the slot. If you no longer have access to the old site, ask us and we will release it.</li>
+          <li>A ThemeForest purchase code covers one site.</li>
+        </ul>
+
+        <h3>If the license server is unreachable</h3>
+        <p>
+          The last successful check is trusted for seven days. A network problem or an outage on our
+          side will not switch your site's modules off.
+        </p>
+      </section>
+
+      <section id="header-footer">
+        <h2>Header &amp; Footer Builder <span class="pill pill--free">Free</span></h2>
+        <p>
+          Replace the theme's header and footer with layouts you build in Elementor.
+        </p>
+        <ol class="doc-steps">
+          <li>Go to <b>Vantorix → Header &amp; Footer Builder</b> and press <b>Add New</b>.</li>
+          <li>Name it, choose Header or Footer, and set where it should appear.</li>
+          <li>Press <b>Create and edit</b> to open Elementor.</li>
+          <li>Build, publish, and it replaces the theme's own.</li>
+        </ol>
+        <p>
+          If two templates could apply to the same page, the one with the higher priority number wins.
+        </p>
+      </section>
+
+      <section id="popup">
+        <h2>Popup Builder <span class="pill pill--free">Free</span></h2>
+        <p>Design popups in Elementor and choose what opens them.</p>
+        <ul class="doc-list">
+          <li><b>Triggers</b> — on page load, after a delay, at a scroll depth, on exit intent, or on a click.</li>
+          <li><b>Frequency</b> — once per visitor, once per session, or every time. Cookie length is yours to set.</li>
+          <li><b>Audience</b> — logged in, logged out, or specific roles.</li>
+          <li><b>Devices</b> — show or hide per breakpoint.</li>
+        </ul>
+      </section>
+
+      <section id="404">
+        <h2>404 Page Builder <span class="pill pill--free">Free</span></h2>
+        <p>
+          Build the page people land on when a URL does not exist. You can also redirect certain
+          missing URLs somewhere useful, and keep a log of what people are failing to find — that log
+          is often the fastest way to spot a broken link on your own site.
+        </p>
+      </section>
+
+      <section id="loader">
+        <h2>Screen Loader <span class="pill pill--free">Free</span></h2>
+        <p>
+          A loading screen shown while the page prepares. Pick an animation, a timeout, and whether it
+          appears on every visit or only the first. Keep the timeout short — a loader that outstays
+          the page is worse than no loader.
+        </p>
+      </section>
+
+      <section id="archive">
+        <h2>Archive Builder <span class="pill pill--pro">Pro</span></h2>
+        <p>
+          Design the pages that list posts: blog index, category, tag, author, date and custom post
+          type archives.
+        </p>
+        <ol class="doc-steps">
+          <li>Go to <b>Vantorix → Archive Builder → Add New</b>.</li>
+          <li>Build the layout with the Post Block or Post List widget as the loop.</li>
+          <li>Open <b>Display Conditions</b> and choose which archives it applies to.</li>
+          <li>Preview against a real archive while you work.</li>
+        </ol>
+        <p>
+          One template can cover every archive, or you can make a separate one per post type. Use the
+          exclude rules when a template should apply everywhere except one place.
+        </p>
+      </section>
+
+      <section id="single">
+        <h2>Single Post Builder <span class="pill pill--pro">Pro</span></h2>
+        <p>
+          Lay out single posts, pages and custom post types. The same targeting rules apply, plus
+          exclusions and a priority order.
+        </p>
+        <p>
+          Build with the dynamic widgets — Post Title, Post Content, Featured Image, Post Meta, Post
+          Terms, Post Comments — so one template serves every post.
+        </p>
+      </section>
+
+      <section id="search">
+        <h2>Search Builder <span class="pill pill--pro">Pro</span></h2>
+        <p>
+          Replace the theme's search results page. While editing you can set a preview term so you are
+          designing against real results rather than an empty screen. Remember to design the empty
+          state too — it is the screen people see most often when a search goes wrong.
+        </p>
+      </section>
+
+      <section id="tags">
+        <h2>Dynamic Tags <span class="pill pill--pro">Pro</span></h2>
+        <p>
+          Dynamic tags pull real content into any Elementor field. Look for the small database icon
+          next to a control, then pick a tag.
+        </p>
+        <div class="tag-groups">
+          <div>
+            <h3>Post</h3>
+            <p>Title, excerpt, content, ID, URL, date, modified date, featured image, comment count.</p>
+          </div>
+          <div>
+            <h3>Author</h3>
+            <p>Name, bio, profile picture, posts URL, website, email.</p>
+          </div>
+          <div>
+            <h3>Site</h3>
+            <p>Title, tagline, URL, logo, current date, current year, user name.</p>
+          </div>
+          <div>
+            <h3>Archive</h3>
+            <p>Title, description, term name, term URL, post type name.</p>
+          </div>
+          <div>
+            <h3>Fields</h3>
+            <p>Custom fields, ACF text, image, number, date, relationship and repeater values.</p>
+          </div>
+          <div>
+            <h3>Media</h3>
+            <p>Featured image URL, attachment title, caption and alt text.</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="library">
+        <h2>Template Library <span class="pill pill--pro">Pro</span></h2>
+        <p>
+          Ready-made layouts you can import in one click, and a place to save your own for reuse.
+        </p>
+        <ul class="doc-list">
+          <li><b>Templates</b> — individual headers, footers, archives and single layouts.</li>
+          <li><b>Kits</b> — a matched set plus its global colours and fonts.</li>
+          <li><b>Your layouts</b> — save any template you build and drop it into the next project.</li>
+        </ul>
+        <p class="callout">
+          Importing a kit overwrites the site's global colours and fonts. Try it on a staging copy
+          before running it on a site that is already live.
+        </p>
+      </section>
+
+      <section id="targeting">
+        <h2>Display conditions</h2>
+        <p>
+          Every builder template uses the same targeting panel, so once you learn it in the Header
+          Builder you know it everywhere.
+        </p>
+        <table class="spec">
+          <thead>
+            <tr><th scope="col">Setting</th><th scope="col">What it does</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Include</td><td>Where the template should appear. Add several rules to cover several places.</td></tr>
+            <tr><td>Exclude</td><td>Carve out exceptions from the include rules.</td></tr>
+            <tr><td>User roles</td><td>Limit the template to specific logged-in roles.</td></tr>
+            <tr><td>Priority</td><td>When more than one template matches, the higher number wins.</td></tr>
+          </tbody>
+        </table>
+        <p>
+          Rules read from broad to narrow: <b>Entire site</b>, then a post type, then a single page.
+          A narrower rule does not automatically beat a broader one — set the priority when you need
+          a specific outcome.
+        </p>
+      </section>
+
+      <section id="widgets">
+        <h2>Widgets</h2>
+        <p>
+          All widgets are in the free plugin and appear under the <b>Vantorix</b> category in the
+          Elementor panel.
+        </p>
+        <div class="tag-groups">
+          <div>
+            <h3>Posts</h3>
+            <p>Post Block, Post List, Post Title, Post Content, Post Excerpt, Post Meta, Post Terms, Post Comments, Featured Image.</p>
+          </div>
+          <div>
+            <h3>Navigation</h3>
+            <p>Nav Menu, Breadcrumb, Search, Search Results, Categories, Tag Cloud, Back to Top.</p>
+          </div>
+          <div>
+            <h3>Content</h3>
+            <p>Advanced Heading, Advanced Image, Feature Cards, Gallery, Brand, Testimonial, Progress, Marquee.</p>
+          </div>
+          <div>
+            <h3>Interaction</h3>
+            <p>Accordion, Toggle, Smart Contact Actions, Sticky Element.</p>
+          </div>
+        </div>
+        <p>
+          Turn off the ones you do not use under <b>Vantorix → Widgets</b>. Disabled widgets load no
+          CSS or JavaScript at all, which is the simplest performance win available to you.
+        </p>
+      </section>
+
+      <section id="hooks">
+        <h2>Hooks for developers</h2>
+        <p>The free plugin exposes these so add-ons and child themes can extend it.</p>
+        <pre class="code"><code>// Fires after the free modules have booted.
+do_action( 'vantorix_modules_loaded' );
+
+// Register your own Elementor dynamic tags.
+do_action( 'vantorix_register_dynamic_tags', $dynamic_tags_manager );
+
+// Tell the plugin a licensed Pro add-on is present.
+apply_filters( 'vantorix_pro_active', false );</code></pre>
+        <p>Pro adds two more, useful while testing:</p>
+        <pre class="code"><code>// Point the license client at a different API.
+apply_filters( 'vantorix_pro_api_url', $url );
+
+// Treat this install as a development site.
+apply_filters( 'vantorix_pro_is_development_site', $is_dev, $host );</code></pre>
+      </section>
+
+      <section id="troubleshooting">
+        <h2>Troubleshooting</h2>
+
+        <h3>“cURL error 60: SSL certificate…” on the License screen</h3>
+        <p>
+          Your server cannot verify our certificate. This is almost always a local install missing an
+          up-to-date certificate bundle rather than a problem with the license. Local sites run
+          unlocked anyway, so you can carry on. On a live site, ask your host to update the server's
+          CA certificates.
+        </p>
+        <p>To silence it on a local install, add this to <code>wp-config.php</code>:</p>
+        <pre class="code"><code>define( 'WP_ENVIRONMENT_TYPE', 'local' );</code></pre>
+
+        <h3>My header or footer does not show</h3>
+        <ul class="doc-list">
+          <li>Check the template is published, not a draft.</li>
+          <li>Check its display conditions actually include the page you are looking at.</li>
+          <li>Some themes render their own header regardless. Try a theme like Hello Elementor to confirm.</li>
+        </ul>
+
+        <h3>Pro modules are missing after activating Pro</h3>
+        <ul class="doc-list">
+          <li>Check <b>Vantorix → License</b> shows <b>Active</b>.</li>
+          <li>Check the free plugin is version 1.1.0 or newer.</li>
+          <li>Switch the modules on under <b>Vantorix → Modules</b> — they do not enable themselves.</li>
+        </ul>
+
+        <h3>Styles look wrong after an update</h3>
+        <p>
+          Regenerate Elementor's files under <b>Elementor → Tools → Regenerate CSS &amp; Data</b>, then
+          clear any caching plugin and your CDN.
+        </p>
+      </section>
+
+      <section id="faq">
+        <h2>Questions</h2>
+
+        <h3>Is the free plugin limited?</h3>
+        <p>
+          No. It contains no locked code. Pro is a separate plugin that adds modules on top — nothing
+          in the free plugin is switched off to sell you something.
+        </p>
+
+        <h3>Does Pro renew?</h3>
+        <p>
+          You pay once. Updates are included for the period listed on your package. The plugin keeps
+          working after that; you just stop receiving new versions until you renew.
+        </p>
+
+        <h3>What if I stop paying?</h3>
+        <p>
+          Your site keeps running. Templates you built stay where they are.
+        </p>
+
+        <h3>Can I use it on client sites?</h3>
+        <p>
+          Yes. Each client site uses one slot from your license. The Agency package exists for this.
+        </p>
+
+        <h3>Is there a refund?</h3>
+        <p>
+          Tell us within 14 days if it does not work for you and we will refund it. We would rather
+          hear what went wrong than keep the money.
+        </p>
+
+        <h3>Do you offer support in Bengali?</h3>
+        <p>Yes — WhatsApp or Facebook, whichever you prefer.</p>
+      </section>
+
+      <section class="docs__cta">
+        <h2>Still stuck?</h2>
+        <p>Send us the site URL and what you were doing, and we will look at it.</p>
+        <p class="actions">
+          <a class="btn btn--solid" href="index.html#contact">Contact us</a>
+          <a class="btn btn--ghost" href="https://wordpress.org/support/plugin/vantorix-toolkit/" target="_blank" rel="noopener">WordPress.org forum</a>
+        </p>
+      </section>
+
+    </main>
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="shell footer__inner">
+    <p>Vantorix — WordPress plugins built in Bangladesh.</p>
+    <nav aria-label="Footer">
+      <a href="https://wordpress.org/plugins/vantorix-toolkit/" target="_blank" rel="noopener">Free plugin</a>
+      <a href="index.html#pricing">Pricing</a>
+      <a href="index.html#contact">Contact</a>
+    </nav>
+  </div>
+</footer>
+
+<script src="docs.js"></script>
+</body>
+</html>
